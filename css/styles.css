@@ -5,7 +5,7 @@ body, ul {
 }
 
 body {
-  font-family: sans-serif;
+  font: sans-serif;
 }
 
 ul {
@@ -50,6 +50,7 @@ a:hover{
 }
 
 .site-title {
+  font: sans-serif;
   font-size: 22px;
   font-weight: 300;
   line-height: 56px;
