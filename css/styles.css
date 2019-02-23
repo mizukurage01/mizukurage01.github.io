@@ -4,6 +4,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 20px
+}
+
 body {
   font: sans-serif;
 }
@@ -85,4 +89,16 @@ a:hover{
 
 .compro {
   margin-top: 10px;
+}
+
+
+.post-title {
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+@media screen and (max-width: 800px) {
+  .post-tilte {
+    font-size: 28px;
+  }
 }
