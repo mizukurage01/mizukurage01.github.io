@@ -5,8 +5,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding-top: 20px
+  padding-top: 45px;
+  padding-bottom: 9px;
 }
+
 
 body {
   font: sans-serif;
@@ -17,7 +19,7 @@ ul {
 }
 
 li {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 a {
@@ -89,16 +91,4 @@ a:hover{
 
 .compro {
   margin-top: 10px;
-}
-
-
-.post-title {
-  font-size: 32px;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-@media screen and (max-width: 800px) {
-  .post-tilte {
-    font-size: 28px;
-  }
 }
