@@ -4,8 +4,8 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding-top: 40px;
+h1, h3, h4, h5, h6 {
+  padding-top: 35px;
   padding-bottom: 9px;
 }
 
@@ -91,4 +91,14 @@ a:hover{
 
 .compro {
   margin-top: 10px;
+}
+
+.post-title {
+  font-size: 25px;
+  line-height: 1
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: 300;
 }
