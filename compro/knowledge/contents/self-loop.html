@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/contents/self-loop.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,11 +29,16 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <p>えー、今までの知識を全部一気に載せようと思いましたが厳しいので、類題に出会うたびにその周りの情報を更新していくことにします。</p>
+    <h2>自己ループの除去</h2>
     <ul>
-      <li><a href="/compro/knowledge/data-structure.html">データ構造</a></li>
-      <li><a href="/compro/knowledge/dp.html">動的計画法</a></li>
+      <li>DPの式に自分自身を参照してしまう場合（dp[i] = ... + k * dp[i] など)は、式変形によって参照しないようにする（dp[i] = (dp[i]を含まない式）にする)ことで通常のDPに戻せる。</li>
     </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_j">Educational DP Contest J - Sushi</a></li>
+      <p>期待値DP。更新順序が非自明なのでメモ化再帰で書くとよい。<a href="https://qiita.com/drken/items/03c7db44ccd27820ea0d">分かりやすい解説記事（けんちょんさん）</a></p>
+    </ul>
+
   </div>
 </div>
 
