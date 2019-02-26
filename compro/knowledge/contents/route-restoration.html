@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/contents/route-restoration.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>経路復元</h2>
+    <ul>
+      <li><a href="https://qiita.com/drken/items/0c7bab0384438f285f93">意外と解説がない！動的計画法で得た最適解を「復元」する一般的な方法</a></li>
+      <p>経路復元の分かりやすい解説記事。経路をたどるごとにメモしていく方法と、メモせず後からたどる方法がある。</p>
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_f">Educational DP Contest F - LCS</a></li>
+      <p>LCSの経路復元。復元経路は実際にDPでみた経路でなくとも良い。<a href="https://qiita.com/drken/items/03c7db44ccd27820ea0d#_reference-05e7072401f80bce7072">分かりやすい解説記事（けんちょんさん）</a>、<a href="https://atcoder.jp/contests/dp/submissions/4396930">メモ化なしコード（Python）</a></p>
+      <li><a href="https://atcoder.jp/contests/abc118/tasks/abc118_d">ABC118 D - Match Matching</a></li>
+      <p>dp[使ったマッチ棒の本数] = 数字の桁数 でdpを定義し、マッチ棒を全て使った時に最大となるときの桁数を求める。復元は生成する数字が最大となるようにDP後に後ろから順にみて構成していく。どの経路を使うかが複雑なので前からメモ化していくのは難しそう。<a href="https://atcoder.jp/contests/abc118/submissions/4397448">コード（Python）</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
