@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy/sort-large.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,8 +29,12 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <p>「とりあえず○○を考えてみる」の選択肢を増やしていきたい。ひとまず問題に出会うごとに雑に載せていって、後で整理する。</p>
-    <li><a href="/compro/strategy/sort-large.html">sortして大きい順からみる</a></li>
+    <h2>sortして大きい順からみる</h2>
+    <p>sortして大きい順からみると、求めたいものが1つずつ順に決まっていくことも。</p>
+
+    <h3>問題例</h3>
+    <li><a href="https://atcoder.jp/contests/agc011/tasks/agc011_b">AGC011 B - Colorful Creatures</a></li>
+    <p>色iに着目。自分より小さいものは全て取り込めるので、大きいものが取り込めるかを判断したいが、sortしておいても愚直に左からみると各iについてO(n)かかってしまう。この時大きい順にみると、iが全て取り込めるかどうかが各iについて一つずつ順に決まっていく。累積和は0を端に持った半開区間（1-indexed）で書くと良い。<a href="https://atcoder.jp/contests/agc011/submissions/me">コード（Python）</a></p>
   </div>
 </div>
 
