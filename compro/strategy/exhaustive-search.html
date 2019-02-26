@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy/exhaustive-search.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,9 +29,12 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <p>「とりあえず○○を考えてみる」の選択肢を増やしていきたい。ひとまず問題に出会うごとに雑に載せていって、後で整理する。</p>
-    <li><a href="/compro/strategy/exhaustive-search.html">愚直に全探索</a></li>
-    <li><a href="/compro/strategy/sort-large.html">sortして大きい順からみる</a></li>
+    <h2>愚直に全探索</h2>
+    <p>全ての基本。bit、再帰、forの多重ループ、Pythonのitertools.product(range(k), repeat=n)を使う方法などでかける。最後のが書きやすい。</p>
+
+    <h3>問題例</h3>
+    <li><a href="https://atcoder.jp/contests/abc119/tasks/abc119_c">ABC119 C - Synthetic Kadomatsu</a></li>
+    <p>竹をA, B, Cのどこで使うか、またどこにも使わないかの4通り^nの全探索。全探索の練習用に。<a href="https://atcoder.jp/contests/abc119/submissions/4378800">コード（Python）(itertools.productを使った解法)</a></p>
   </div>
 </div>
 
