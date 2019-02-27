@@ -34,18 +34,22 @@
 
     <h3>問題例</h3>
     <ul>
+      <li>操作を後ろから見ていく</li>
+      <p>操作を後ろから遡っていくと一つずつ決まっていくことも。</p>
+      <ul>
+        <li><a href="https://atcoder.jp/contests/agc012/tasks/agc012_b">AGC012 B - Splatter Painting</a></li>
+        <p>後ろから遡って色を塗っていくと色の塗り直しを避けられる。そのまま実装すれば部分点。距離でメモ化できることに気づけば満点。</p><a href="https://atcoder.jp/contests/agc012/submissions/4399567">コード(Python)</a>
+      </ul>
       <li>sortして大きい順からみる</li>
       <p>sortして大きい順からみると、求めたいものが1つずつ順に決まっていくことも。</p>
       <ul>
         <li><a href="https://atcoder.jp/contests/agc011/tasks/agc011_b">AGC011 B - Colorful Creatures</a></li>
         <p>色iに着目。自分より小さいものは全て取り込めるので、大きいものが取り込めるかを判断したいが、sortしておいても愚直に左からみると各iについてO(n)かかってしまう。この時大きい順にみると、iが全て取り込めるかどうかが各iについて一つずつ順に決まっていく。累積和は0を端に持った半開区間（1-indexed）で書くと良い。<a href="https://atcoder.jp/contests/agc011/submissions/me">コード（Python）</a></p>
       </ul>
-      <li>操作を後ろから見ていく</li>
-      <p>上とほとんど同じ。操作を後ろから遡っていくと一つずつ決まっていくことも。</p>
-      <ul>
-        <li><a href="https://atcoder.jp/contests/agc012/tasks/agc012_b">AGC012 B - Splatter Painting</a></li>
-        <p>後ろから遡って色を塗っていくと色の塗り直しを避けられる。そのまま実装すれば部分点。距離でメモ化できることに気づけば満点。</p><a href="https://atcoder.jp/contests/agc012/submissions/4399567">コード(Python)</a>
-      </ul>
+      <li>ゲームは勝敗が決している局面から遡って解析</li>
+      <p><a href="https://qiita.com/drken/items/4e1bcf8413af16cb62da">ゲームを解く！！ 〜 将棋の必勝法を求めるアルゴリズム 〜</a>（けんちょんさん）</p>
+      <p>この記事にゲームの説明から問題例まで載っている。すごい。</p>
+
     </ul>
   </div>
 </div>
