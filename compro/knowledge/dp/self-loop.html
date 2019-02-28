@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/contents/union-find.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/self-loop.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,16 +29,14 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <h2>Union-Find</h2>
+    <h2>自己ループの除去</h2>
     <ul>
-      <li><a href="https://atc001.contest.atcoder.jp/tasks/unionfind_a">AtCoder Typical Contest 001</a></li>
-      <p>Union-Findの解説。問題付き。</p>
-
+      <li>DPの式に自分自身を参照してしまう場合（dp[i] = ... + k * dp[i] など)は、式変形によって参照しないようにする（dp[i] = (dp[i]を含まない式）にする)ことで通常のDPに戻せる。</li>
     </ul>
     <h3>問題例</h3>
     <ul>
-      <li><a href=""></a></li>
-      <p></p>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_j">Educational DP Contest J - Sushi</a></li>
+      <p>期待値DP。更新順序が非自明なのでメモ化再帰で書くとよい。<a href="https://qiita.com/drken/items/03c7db44ccd27820ea0d">分かりやすい解説記事（けんちょんさん）</a></p>
     </ul>
 
   </div>

@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/contents/self-loop.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/cumulative.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,14 +29,12 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <h2>自己ループの除去</h2>
-    <ul>
-      <li>DPの式に自分自身を参照してしまう場合（dp[i] = ... + k * dp[i] など)は、式変形によって参照しないようにする（dp[i] = (dp[i]を含まない式）にする)ことで通常のDPに戻せる。</li>
-    </ul>
+    <h2>累積和高速化</h2>
+      <p>DP内で累積和を用いることによって高速化する。</p>
     <h3>問題例</h3>
     <ul>
-      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_j">Educational DP Contest J - Sushi</a></li>
-      <p>期待値DP。更新順序が非自明なのでメモ化再帰で書くとよい。<a href="https://qiita.com/drken/items/03c7db44ccd27820ea0d">分かりやすい解説記事（けんちょんさん）</a></p>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_m">Educational DP Contest M - Candies</a></li>
+      <p>累積和高速化の基本的な問題。配るDPだと見えにくいが、貰うDPで考えると見えやすい。<a href="https://kyopro-friends.hatenablog.com/entry/2019/01/12/231035">解説記事</a>(kyopro_friendsさん)。<a href="https://atcoder.jp/contests/dp/submissions/4408388">コード（Python）</a></p>
     </ul>
 
   </div>
