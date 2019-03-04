@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy/fix-variance.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>変数固定</h2>
+    <p>変数を固定するとより小さな問題に落とせる。ざっくりまとめ過ぎかも。</p>
+
+    <h3>問題例</h3>
+    <li><a href="https://atcoder.jp/contests/agc004/tasks/agc004_b">AGC004 B - Colorful Slimes</a></li>
+    <p>魔法を唱える回数を固定してみる(k回とする)。すると、色iは[(i-k)%N, i]のどれかのスライムからくることになるので、その区間の中でスライム生成にかかる秒数が最も短いところを選ぶのが最適となる。区間の最小値は毎回計算するとO(n)で間に合わないが、k-1回目の区間を利用すればk回目の区間の最小値がO(1)で求まる。</p>
+    <li><a href="https://atcoder.jp/contests/nikkei2019-final/tasks/nikkei2019_final_c">全国統一プログラミング王決定戦本戦 C - Come Together</a></li>
+    <p>行と列を独立に考えられるので、ある行にコマを全て持ってきて考えてみる。あるマスまで移動する距離の和が最小となるのは、そのマスが中央値となる時に決まる（差の絶対値の総和の最小化は中央値になるという定石(?)）ので、その値が求まる。列も同様。</p>
+  </div>
+</div>
+
+
+</body>
+</html>

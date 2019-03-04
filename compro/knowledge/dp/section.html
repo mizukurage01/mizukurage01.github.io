@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/self-loop.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,13 +29,18 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <p>「とりあえず○○を考えてみる」の選択肢を増やしていきたい。ひとまず問題に出会うごとに雑に載せていって、後で整理する。必要ならばknowledgeのところからも持ってきたい。</p>
-    <li><a href="/compro/strategy/exhaustive-search.html">愚直に全探索</a></li>
-    <li><a href="/compro/strategy/reverse.html">逆から遡ってみる</a></li>
-    <li><a href="/compro/strategy/fix-variance.html">変数固定</a></li>
+    <h2>区間DP</h2>
+    <ul>
+      <li>区間の長さを増やしていくように実装をする（最も外側のforループを区間の長さにしてかくと良い。区間は半開区間でかく。）</li>
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_j">Educational DP Contest J - Sushi</a></li>
+      <p>区間[l, r)のスライムは区間[l, k), [k, r)のスライムが合体することでできることを考慮すると遷移がかける。<a href="https://atcoder.jp/contests/dp/submissions/4417085">コード(Python)</a></p>
+    </ul>
+
   </div>
 </div>
-
 
 </body>
 </html>
