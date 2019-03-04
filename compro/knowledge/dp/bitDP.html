@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/cumulative.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>bitDP</h2>
+      <p></p>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_o">Educational DP Contest O - Matching</a></li>
+      <p>難しめ。どの男性とどの女性がペアになっているか分かれば次のペアの決め方がわかるので、愚直にまとめるとdp[2^n][2^n]となるが間に合わない。男性を使う順番を方向性を持って見てあげる(i番目の男性までがペアになった次はi+1番目の男性をペアにする等)と、女性だけをbitで管理すれば良いのでdp[n][2^n]まで状態数を減らせるが、まだ間に合わない。男性と女性でペアになった人数が同じなので、その場合だけ見るというような枝刈りをしてあげるとC++だとbitの1が立っている数を__builtin_popcount()を使って求めると間に合うよう。もしくは、男性と女性でペアになった人数が同じという情報から、女性のペアになった集合さえ分かれば男性がどこまで使ったか判断できるので、状態をdp[2^n]だけにまとめると良い。遷移がforループでは書きにくいと思ったので、メモ化再帰を使った。<a href="https://atcoder.jp/contests/dp/submissions/4465339">コード (Python)</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
