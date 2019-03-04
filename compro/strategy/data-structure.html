@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/strategy/data-structure.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>データ構造で計算量を落とす</h2>
+    <p>まだ計算量を落とそうと思ってデータ構造をあれこれ試すぐらいしかできないので、自然にこの機能が必要だからこれを使うみたいな纏め方を後々したい（実力不足なのでとりあえず使いたい気持ちを纏めていく。見えてきたら纏め直したい）。</p>
+
+    <h3>問題例</h3>
+    <ul>
+      <li>heapを用いる</li>
+      <ul>
+        <li><a href="https://atcoder.jp/contests/agc005/tasks/agc005_b">AGC005 B - Minimum Sum</a></li>
+        <p>全探索は間に合わないから、要素ごとに着目して処理できないか考える（これは典型っぽい）。着目した要素が最小となる区間の個数を考えると、着目した要素が最小となるような区間の左端と右端を求めれば計算できることがわかる。ここから、各要素について愚直に左端と右端を求めるとO(N^2)かかるので、効率よく求めたい。ここで、データ構造を用いて計算量を落とすという発想があれば良い。ある要素に着目して左端と右端を決めたいが、2つ同時に考えるとごちゃごちゃするので左端だけ、右端だけを別々に求めたくなる（分解して単純にするのはよくありそう）。右端を求めることを考える。例えば左から順に1, 3, 6ときて、次に2がくると、3, 6のところの右端が2に決まる。このように複数の数字を同時に処理したいので、左から順に見たときに、見た数字を保持する必要はありそう。それで、2よりも大きい数字を効率よく取り出せれば良さそう。ここまでくればheapqは出てきそう。<a href="https://atcoder.jp/contests/agc005/submissions/4466160">コード (Python)</a></p>
+      </ul>
+    </ul>
+
+  </div>
+</div>
+
+
+</body>
+</html>
