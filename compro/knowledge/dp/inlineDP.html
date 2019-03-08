@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/inlineDP.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>配列の使い回し（インラインDP）</h2>
+    <ul>
+      <li><a href="http://topcoder.g.hatena.ne.jp/skyaozora/20171212">「インラインDP」というテクニックに関して (skyさん)</a></li>
+      <p>配列の更新箇所が少ないとき、同じ配列を使い回すことによって更新しない部分をそのままにしておくことで計算量を落とすテクニック。更新の際にSegment TreeやBITなどを用いて高速に更新できるように工夫すると良い。</p>
+    </ul>
+      <p></p>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_q">Educational DP Contest Q - Flowers</a></li>
+      <p>dp[i][j]:= 「左からi番目までの花を見たときに、残した花で最大の高さの花をjとした時の、とった花の美しさの総和の最大値」 のようなdpを立てたいが、これでは間に合わない。更新はdp[i][j]からdp[i+1][i+1]とdp[i+1][j]だけだが、ここでdp[j]のように一次元配列にしてiからi+1への更新を同じ配列をそのまま用いてあげると、更新する部分はdp[i+1]の一箇所だけで済むことがわかる（dp[i][j]のように持つと、dp[i][j]からdp[i+1][j]を更新する必要があるが、dp[j]のように持つと、iからi+1の更新の際にdp[j]にすでに値が記録されていて、この値は変化しないので、この更新を無視できる）。dp[j]からdp[i+1]への更新はそのまま愚直にするとO(n)かかってしまうが、dp[i+1]への更新はj &lt i, h[j] &gt h[i+1]でdp[j]が最大となるものから更新すればよく、これはBITを用いて高さの最大がh[i]未満となるような区間の美しさの最大値を保持しておけば O(log n)で求められる。全体ではO(n log n)。<a href="https://atcoder.jp/contests/dp/submissions/4500320">コード（Python）</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
