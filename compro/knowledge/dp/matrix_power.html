@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/matrix_power.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>行列累乗</h2>
+    <ul>
+      <p>行列累乗の計算の仕方は蟻本参照。<a href="">Pythonでの愚直な実装（もっと高速化できそう）</a></p>
+      <p>累乗計算は繰り返し二乗法を実装すると高速に処理できる。dpの遷移式を書いたら行列計算の式になることに気づくのが難しい。</p>
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_r">Educational DP Contest  R - Walk</a></li>
+      <p>遷移式をかくと行列計算になっていることがわかるので、行列累乗を用いて高速化できる。<a href="https://kyopro-friends.hatenablog.com/entry/2019/01/12/231035">解説記事（kyopro_friendsさん）</a>、<a href="https://atcoder.jp/contests/dp/submissions/4547370">コード（Python）</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
