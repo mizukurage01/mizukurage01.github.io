@@ -35,6 +35,11 @@
     <ul>
       <li><a href="https://atcoder.jp/contests/dp/tasks/dp_m">Educational DP Contest M - Candies</a></li>
       <p>累積和高速化の基本的な問題。配るDPだと見えにくいが、貰うDPで考えると見えやすい。<a href="https://kyopro-friends.hatenablog.com/entry/2019/01/12/231035">解説記事</a>(kyopro_friendsさん)。<a href="https://atcoder.jp/contests/dp/submissions/4408388">コード（Python）</a></p>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_t">Educational DP Contest T - Permutation</a></li>
+      <p>難問。うまく状態をまとめる必要がある。まずどの数字を使ったかを集合で管理してbitDPしたくなるがとても間に合わない。ここで、i番目までみて、iに書かれている数字よりも大きい数と小さい数をdpの要素として
+        持っておくと、iに書かれている数字を保持することなくDPの遷移式が立てられる。さらに、i番目までみたときの大きい数の個数さえわかれば小さい数の個数が一意に決まるので、結局DPテーブルは、
+      「dp[i][j] := 左からi番目までみたときに、i番目の数字よりも大きい数でまだ使用していないものの個数がjの場合の数」となる。これで状態がO(n^2)、遷移にO(n)となりO(n^3)となるがまだ間に合わない。ここで
+    配るDPではなく貰うDPで書くと累積和によって遷移を高速化できるので、全体でO(n^2)とできる。<a href="https://atcoder.jp/contests/dp/submissions/4639893">コード (Python)</a></p>
     </ul>
 
   </div>
