@@ -31,10 +31,15 @@
   <div class="wrapper">
     <h2>bitDP</h2>
       <p>集合をbitを使って管理する。入門記事なかったかな？</p>
+      <li><a href="https://topcoder.g.hatena.ne.jp/jackpersel/20100804/1281196966">ビットによる部分集合の列挙 (Sigmarさん)</a></li>
+      <p>ある集合Sの部分集合を効率よく列挙する方法。1が立っているbitの数程度のループ回数になる。</p>
     <h3>問題例</h3>
     <ul>
       <li><a href="https://atcoder.jp/contests/dp/tasks/dp_o">Educational DP Contest O - Matching</a></li>
       <p>難しめ。どの男性とどの女性がペアになっているか分かれば次のペアの決め方がわかるので、愚直にまとめるとdp[2^n][2^n]となるが間に合わない。男性を使う順番を方向性を持って見てあげる(i番目の男性までがペアになった次はi+1番目の男性をペアにする等)と、女性だけをbitで管理すれば良いのでdp[n][2^n]まで状態数を減らせるが、まだ間に合わない。男性と女性でペアになった人数が同じなので、その場合だけ見るというような枝刈りをしてあげるとC++だとbitの1が立っている数を__builtin_popcount()を使って求めると間に合うよう。もしくは、男性と女性でペアになった人数が同じという情報から、女性のペアになった集合さえ分かれば男性がどこまで使ったか判断できるので、状態をdp[2^n]だけにまとめると良い。遷移がforループでは書きにくいと思ったので、メモ化再帰を使った。<a href="https://atcoder.jp/contests/dp/submissions/4465339">コード (Python)</a></p>
+
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_u">Educational DP Contest U - Grouping</a></li>
+      <p>部分集合を効率よく列挙するテクニックを使う問題。集合を分割していき、できた部分集合に対して獲得できるスコアの最大値を網羅的に求めていく。メモ化再帰で書くと良い。部分集合を上のテクニックを用いてうまく数えてあげるとO(4^n)からO(3^n)に落とせる。<a href="https://atcoder.jp/contests/dp/submissions/4643281">コード (Python)</a></p>
     </ul>
 
   </div>
