@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/dp/convex-hull-trick.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>Convex Hull Trick</h2>
+    <ul>
+      <li><a href="http://satanic0258.hatenablog.com/entry/2016/08/16/181331">Convex-Hull Trick (satanicさん)</a></li>
+      <p>Convex Hull Trickの分かりやすい解説。</p>
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="https://atcoder.jp/contests/dp/tasks/dp_z"></a>Educational DP Contest Z - Frog3</li>
+      <p>配るDPの形だとO(n^2)となるので、高速化したい。高速化するには貰うDPの形に変形してあげて、遷移をまとめて計算するやり方が定石っぽい（累積和とかBITとか使った高速化など）。今回はうまく式変形してあげるとConvex Hull Trickが使える形になるのでそれで高速化できる。ここでは追加クエリにおける直線の傾きが単調で、かつ最小値クエリにおけるxが単調という条件を満たしている(上のsatanicさんの記事参照)。<a href="https://www.hamayanhamayan.com/entry/2019/01/12/161237">解説記事 (はまやんはまやんさん)</a>（式変形が詳しく載っている。）<a href="https://atcoder.jp/contests/dp/submissions/4662327">コード (Python)</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
