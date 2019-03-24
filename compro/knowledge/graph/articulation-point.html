@@ -8,7 +8,7 @@
   <title>みずくらげの探険記録</title>
   <meta name="description" content="description">
   <meta name="author" content="みずくらげ">
-  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/graph.html">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/graph/articulation-point.html">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="みずくらげの探険記録">
@@ -29,11 +29,25 @@
 
 <div class="page-content">
   <div class="wrapper">
-    <h2>グラフ</h2>
-
+    <h2>関節点</h2>
     <ul>
-      <li><a href="/compro/knowledge/graph/topological-sort.html">トポロジカルソート</a></li>
-      <li><a href="/compro/knowledge/graph/articulation-point.html">関節点</a></li>
+      <li><a href="http://kagamiz.hatenablog.com/entry/2013/10/05/005213">橋と関節点, lowlink (Shimbaさん)</a></li>
+      <p>ord : DFS treeにおける頂点の訪問時刻</p>
+      <p>lowlink : 後退辺 (DFS treeで用いなかった辺)を高々1度だけ用いて到達することのできる頂点のordの最小値</p>
+      <p>とすると、関節点をO(n+m)で効率よく求めることができる。具体的には、</p>
+      <ul>
+        <li>頂点uがDFS treeの根のとき、その次数が1より大きければ関節点</li>
+        <li>頂点uが根でない時、頂点uのある子vについて、ord[u] &lt= lowlink[v]が成り立てば関節点</li>
+      </ul>
+      <p>　</p>
+      <p>となる。</p>
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href=""></a></li>
+      <p></p>
+    </ul>
+
   </div>
 </div>
 
