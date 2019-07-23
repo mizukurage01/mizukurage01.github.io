@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>みずくらげの探険記録</title>
+  <meta name="description" content="description">
+  <meta name="author" content="みずくらげ">
+  <link rel="canonical" href="https://mizukurage01.github.io/compro/knowledge/data-structure/RBST.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="みずくらげの探険記録">
+  <meta name="twitter:image" content="https://i.imgur.com/uJrIfE4.jpg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="favicon-mizukurage.ico">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="wrapper">
+    <a id="yohane" href="http://www.lovelive-anime.jp/uranohoshi/">
+      <img src="/img/mizukurage.jpg" width="45" height="45" alt="profile" class="icon">
+    </a>
+    <a class="site-title" href="/">みずくらげの探険記録</a>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="wrapper">
+    <h2>平衡二分探索木 -RBST-</h2>
+    <p>書くのが大変。1つの構造体でまとめると良さそう（rootが簡単に管理できるので。1つにしなくてもいいかもしれないけど。）</p>
+    <ul>
+      <li><a href="https://www.slideshare.net/iwiwi/2-12188757">プログラミングコンテストでのデータ構造 2 ～平衡二分探索木編～</a>(秋葉さん)</li>
+      <p>主にTreapの解説。merge-splitが書きやすい。splitは最初理解しにくいけど、返り値のnodeのペアの順番を意識して、木構造を紙に書きながら追っていくと理解できるはず。実装は全体を一つのstructとして管理するのが良さそう（次の記事）</p>
+      <li><a href="https://qiita.com/drken/items/1b7e6e459c24a83bb7fd">k 番目の値を高速に取り出せるデータ構造のまとめ - BIT上二分探索や平衡二分探索木など</a>(けんちょんさん)</li>
+      <p>RBSTの実装例が載ってある。以下メモ。</p>
+      <p>randInt関数は、<a href="https://en.wikipedia.org/wiki/Xorshift">Xorshift</a>のxor128。乱数を生成する。高速（実際にこれを使うと速くなった）。</p>
+      <p>一つの構造体でまとめてしまうと楽（これをしないで実装したら、rootが変化した時に動かなくて大変だった）。基本的に関数を二つ用意しておく（一般的なものと、自分自身を指すもの）。</p>
+      <p>構造体の初期化の書き方は知っておけば十分理解できる。</p>
+      <p>upperBoundは、lowerBoundのval+1にしたものを使いまわしても良さそう</p>
+      <p>mergeの引数の順番は交換可能ではないことに注意しておく。左の引数に、右が新たに付け加えられる感じ。（[0, l]に[l+1, r]が追加される感じ）</p>
+      <p>RBSTでは、mergeするとき、nodeの多い方に、少ない方が付け加えられる確率が高くなるようなバイアスを表現してあげるだけでよく、これがあればTreapで必要なpriorityを書かなくて済むので楽。</p>
+      <p>上の記事の実装は、setのような機能（値が昇順に並んでいる）を持たせている実装だが、必ずしも値を基準に昇順にする必要はない（ここ重要！）。keyの順番は反映されているが、値が並んでいない通常のリストのような感覚の構造体も作れる（新たに値ではなくkeyを引数に持つinsertとeraseを加える必要あり）。</p>
+      <p>typedef long long VALのようにしておいて、VALで値を管理しておくと、あとでintに変えたりすることもできる。どこかで役立つかもしれない...</p>
+      <p><a href="https://github.com/mizukurage01/competitive_programming_library/blob/master/c%2B%2B/data_structure/RBST.cpp">コード</a>（上の記事を参考に書いてみたもの。最小値の取り出しや、k番目のinsert, eraseを付け加えてある（現時点）。コードは<a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1508">この問題</a>用。</p>
+      <p>遅延評価は後日追記予定</p>
+
+    </ul>
+    <h3>問題例</h3>
+    <ul>
+      <li><a href="http://codeforces.com/contest/1131/problem/F">Codeforces Round #541 (Div. 2) F. Asya And Kittens</a></li>
+      <p>上の記事の内容をそのまま使えば解ける。<a href="http://codeforces.com/contest/1131/submission/50408850">コード(Python)</a></p>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
